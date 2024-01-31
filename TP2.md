@@ -35,31 +35,6 @@ Les images listées par la commande `docker images` ne font pas état d'une imag
 dev $ docker image pull alpine
 2.6: Pulling from library/alpine
 2a3ebcb7fbcc: Pull complete
-Digest: sha256:e9cec9aec697d8b9d450edd32860ecd363f2f3174c8338beb5f809422d182c63
-2.7: Pulling from library/alpine
-4dea34575ff3: Pull complete
-Digest: sha256:9f08005dff552038f0ad2f46b8e65ff3d25641747d3912e3ea8da6785046561a
-3.1: Pulling from library/alpine
-35a9f57fd9f2: Pull complete
-Digest: sha256:2d74cbc2fbe3d261fdcca45d493ce1e3f3efd270114a62e383a8e45caeb48788
-3.2: Pulling from library/alpine
-e052f352ed4b: Pull complete
-Digest: sha256:8565a58be8238ef688dbd90e43ec8e080114f1e1db846399116543eb8ef7d7b7
-3.3: Pulling from library/alpine
-c19324d1d971: Pull complete
-Digest: sha256:06fa785d55c35050241c60274e24ad57025683d5e939b3a31cc94193ca24740b
-3.4: Pulling from library/alpine
-49388a8c9c86: Pull complete
-Digest: sha256:915b0ffca1d76ac57d83f28d568bcb516b6c274843ea8df7fac4b247440f796b
-3.5: Pulling from library/alpine
-b1f00a6a160c: Pull complete
-Digest: sha256:b007a354427e1880de9cdba533e8e57382b7f2853a68a478a17d447b302c219c
-3.6: Pulling from library/alpine
-b56ae66c2937: Pull complete
-Digest: sha256:d6bfc3baf615dc9618209a8d607ba2a8103d9c8a405b3bd8741d88b4bef36478
-edge: Pulling from library/alpine
-e00d546a75ad: Pull complete
-Digest: sha256:23e7d843e63a3eee29b6b8cfcd10e23dd1ef28f47251a985606a31040bf8e096
 latest: Pulling from library/alpine
 Digest: sha256:d6bfc3baf615dc9618209a8d607ba2a8103d9c8a405b3bd8741d88b4bef36478
 Status: Downloaded newer image for alpine
@@ -71,19 +46,9 @@ Maintenant, découvrons les images téléchargées en relançant la commande `do
 dev $ docker image ls
 REPOSITORY          TAG                 IMAGE ID            CREATED             SIZE
 alpine              3.5                 6c6084ed97e5        5 months ago        3.99MB
-alpine              3.4                 c7fc7faf8c28        5 months ago        4.82MB
-alpine              3.3                 fc8815064a1b        5 months ago        4.81MB
-alpine              3.2                 220b1d97bf6a        5 months ago        5.27MB
-alpine              3.1                 2ba97bb89407        5 months ago        5.05MB
-alpine              edge                5c4fa780951b        5 months ago        4.15MB
-alpine              3.7                 3fd9065eaf02        5 months ago        4.15MB
-alpine              latest              3fd9065eaf02        5 months ago        4.15MB
-alpine              3.6                 77144d8c6bdc        5 months ago        3.97MB
-alpine              2.7                 93f518ec2c41        2 years ago         4.71MB
-alpine              2.6                 e738dfbe7a10        2 years ago         4.5MB
 ...
 ```
-La commande liste non pas une mais dix versions (images) de la distribution `alpine` à partir de son dépôt stocké sur le [Docker Hub](https://hub.docker.com/_/alpine?tab=tags). On remarque que certaines versions correspondent bien aux couches que l'on a téléchargé précédemment grâce à la commande `docker image pull`. On peut donc choisir une image parmi toutes ces versions afin de démarrer un conteneur.
+La commande liste une versions (images) de la distribution `alpine` à partir de son dépôt stocké sur le [Docker Hub](https://hub.docker.com/_/alpine?tab=tags). On remarque que certaines versions correspondent bien aux couches que l'on a téléchargé précédemment grâce à la commande `docker image pull`.
 
 Lançons un conteneur avec une image de base `alpine`.
 ```sh

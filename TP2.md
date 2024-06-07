@@ -83,9 +83,9 @@ alpine                                                   3.7       791c3e2ebfcb
 alpine                                                   3.6       da579b235e92
 [...]
 ```
-En réalité, Docker utilise également des tags pour qualifier les images. Dans notre cas, les images avec les tags `3.8` et `latest` sont en réalité la **même image**. Par défaut, si on met juste `alpine`, Docker construit un nouveau conteneur avec la version marquée par un tag `latest`.
+En réalité, Docker utilise également des tags pour qualifier les images. Dans notre cas, les images avec les tags `3.10` et `latest` sont en réalité la **même image**. Par défaut, si on met juste `alpine`, Docker construit un nouveau conteneur avec la version marquée par un tag `latest`.
 
-Pour choisir une autre distribution de alpine, par exemple `3.5`, il faut également spécifier le tag de l'image pour la commande docker container run.
+Pour choisir une autre distribution de alpine, par exemple `3.10`, il faut également spécifier le tag de l'image pour la commande docker container run.
 ```sh
 dev $ docker container run -i -t alpine:3.10 /bin/sh
 ```
@@ -94,12 +94,12 @@ Encore une fois, depuis l’intérieur du conteneur, vérifions quelle version d
 # cat /etc/os-release
 NAME="Alpine Linux"
 ID=alpine
-VERSION_ID=3.5.2
+VERSION_ID=3.10.2
 PRETTY_NAME="Alpine Linux v3.5"
 HOME_URL="http://alpinelinux.org"
 BUG_REPORT_URL="http://bugs.alpinelinux.org"
 ```
-Et voilà ! Nous avons cette fois-ci crée un conteneur avec comme image de base une distribution alpine 3.5. Sortez maintenant de ce conteneur en tapant la commande exit.
+Et voilà ! Nous avons cette fois-ci crée un conteneur avec comme image de base une distribution alpine 3.10. Sortez maintenant de ce conteneur en tapant la commande exit.
 ## 4- Chercher des images
 
 Pour chercher des images disponibles dans le Docker Hub, on peut utiliser la commande `docker search`. Tentons de chercher le terme “mysql” :

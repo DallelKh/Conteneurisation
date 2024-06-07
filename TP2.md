@@ -87,7 +87,7 @@ En réalité, Docker utilise également des tags pour qualifier les images. Dans
 
 Pour choisir une autre distribution de alpine, par exemple `3.5`, il faut également spécifier le tag de l'image pour la commande docker container run.
 ```sh
-dev $ docker container run -i -t alpine:3.5 /bin/sh
+dev $ docker container run -i -t alpine:3.10 /bin/sh
 ```
 Encore une fois, depuis l’intérieur du conteneur, vérifions quelle version de alpine a été démarrée avec la commande `cat /etc/os-release`.
 ```
